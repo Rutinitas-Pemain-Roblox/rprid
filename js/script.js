@@ -91,7 +91,7 @@ const config = {
     Emails are sent via https://formsubmit.co/
     */
     contactPage: {
-        email: "nikashinetwork@gmail.com"
+        email: "rutinitaspemainroblox@gmail.com"
     }
 }
 
