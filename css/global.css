@@ -8,6 +8,19 @@
   align-items: center;
 }
 
+@font-face {
+  font-family: 'RPR';
+  src:  url('../css/FOT-Yuruka_Std.woff2') format('woff2'),
+        url('../css/FOT-Yuruka_Std.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.typeface {
+  font-family: 'RPR', sans-serif;
+}
+
 :root {
   --main-font: 'Inter', sans-serif;
   --main-color: #ff370d;
@@ -80,7 +93,7 @@ body {
 }
 
 .navbar .menu-mobile .logo img {
-  max-width: 40px;
+  max-height: 40px;
   height: auto;
 }
 
@@ -222,14 +235,14 @@ section:not(#header) .content {
   }
 }
 
-@media screen and (max-width: 819px) {
+@media screen and (max-width: 425px) {
   .navbar {
     padding: 10px 12px;
     width: calc(100% - 1em);
   }
 }
 
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1000px) {
   .navbar {
     flex-direction: column;
     gap: 20px;

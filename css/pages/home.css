@@ -1,5 +1,4 @@
 @import "css/global.css";
-
 /*Header*/
 #header {
     background: url("../../images/header-background.jpg") no-repeat fixed center;
@@ -48,28 +47,23 @@
 
 #header .content .left {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
 #header .content .left .server-name {
+    color: var(--main-color);
+    font-size: 36pt;
+    text-align: center;
+}
+
+#header .content .left .server-name .logo-text {
     display: flex;
     flex-direction: column;
-}
-
-#header .content .left .server-name p {
-    color: var(--main-color);
-    text-transform: uppercase;
-    font-size: 36pt;
-    font-weight: 800;
-    transform: translate(-12pt, 18pt);
-}
-
-#header .content .left .server-name h1 {
-    color: var(--main-color);
-    text-transform: uppercase;
-    font-size: 65px;
-    font-weight: 900;
+    gap: 12px
 }
 
 #header .content .left .server-description {
