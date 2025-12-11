@@ -4,7 +4,7 @@
     background: url("../../images/header-background.jpg") no-repeat fixed center;
     min-width: 100%;
     min-height: 80dvh;
-    height: 90dvh;
+    height: 100dvh;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -48,22 +48,15 @@
 #header .content .left {
     display: flex;
     width: 100%;
-    flex-direction: column;
+    height: 100%;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
-#header .content .left .server-name {
-    color: var(--main-color);
-    font-size: 36pt;
-    text-align: center;
-}
-
-#header .content .left .server-name .logo-text {
-    display: flex;
-    flex-direction: column;
-    gap: 12px
+#header .content .left img {
+    max-width: calc(100% - 60dvh);
+    height: auto;
+    transition: 0.3s ease-in-out;
 }
 
 #header .content .left .server-description {
@@ -668,11 +661,6 @@
         gap: 60px;
     }
 
-    #header .content .left {
-        gap: 30px;
-        justify-content: left;
-    }
-
     #header .content .right .stats {
         width: fit-content;
     }
@@ -705,14 +693,6 @@
         padding: 150px 30px;
     }
 
-    #header .content .left .server-name p {
-        font-size: 15px;
-    }
-
-    #header .content .left .server-name h1 {
-        font-size: 40px;
-    }
-
     #header .content .left .server-description {
         font-size: 16px;
     }
@@ -738,11 +718,9 @@
     #header .content .right .stats .stat:hover .icon {
         transform: scale(1);
     }
-}
 
-@media screen and (max-width: 447px) {
-    #header .content .left .server-name h1 {
-        font-size: 30px;
+    #header .content .left img{
+        max-width: 100%;
     }
 }
 

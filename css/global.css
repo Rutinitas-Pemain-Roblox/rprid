@@ -38,8 +38,8 @@
   --stats-background: rgba(196, 46, 0, 0.05);
   --stat-icon-background-2: rgba(196, 46, 0, 0.5);
 
-  --scroll-bar: rgba(210, 208, 208, 0.3);
-  --scroll-bar-hover: #555555FF;
+  --scroll-bar: #ff801e;
+  --scroll-bar-hover: #ff0000;
 
   --red-color: #FF7C7C;
   --warning-background: rgba(255, 124, 124, 0.17);
@@ -66,10 +66,11 @@ body {
   width: calc(100% - 8rem);
   flex-direction: row;
   justify-content: space-between;
+  padding: 24px 0px;
   align-items: center;
-  border-radius: 16px;
-  background: transparent;
-  backdrop-filter: blur(24px);
+  border-radius: 32px;
+  background: #24272b48;
+  backdrop-filter: blur(100px);
   transition: 0.3s ease-in-out;
 }
 
@@ -108,6 +109,7 @@ body {
   flex-direction: row;
   align-items: baseline;
   gap: 30px;
+  padding-right: 8px;
   transition: 0.3s ease-in-out;
 }
 
@@ -128,9 +130,10 @@ body {
   content: "";
   position: absolute;
   bottom: -12px;
-  left: 0;
-  width: 60px;
-  height: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
   border-radius: 5px;
   background: var(--main-color);
 }
@@ -146,6 +149,11 @@ body {
   transition: 0.5s;
   display: none;
   width: 42px;
+}
+
+.navbar .menu-mobile .hamburger img {
+  width: 32px;
+  height: 100%;
 }
 
 .navbar .menu-mobile .hamburger:hover {
@@ -227,10 +235,6 @@ section:not(#header) .content {
     padding: 14px 14px;
     align-items: center;
   }
-
-  .navbar .links .link:not(.active):hover {
-    transition: none;
-  }
 }
 
 @media screen and (max-width: 425px) {
@@ -264,7 +268,7 @@ section:not(#header) .content {
     width: 100%;
     opacity: 0;
     z-index: -1;
-    padding: 0 18px 12px 18px;
+    padding: 0 18px 12px 26px;
   }
   
   .navbar .links .link {
@@ -274,6 +278,15 @@ section:not(#header) .content {
 
   .navbar .links .link:not(.active):hover {
     transition: none;
+  }
+  
+  .navbar .links .link.active::after {
+    bottom: -4px;
+    left: 0;
+    transform: translateX(-12px);
+    width: 6px;
+    height: 32px;
+    border-radius: 2px;
   }
 }
 
