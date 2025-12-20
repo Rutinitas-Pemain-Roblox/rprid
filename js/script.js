@@ -372,11 +372,11 @@ setDataFromConfigToHtml();
 
   /* ================= DATA ================= */
   const data = [
-    { name: 'Founder', img: 'https://picsum.photos/300/200?1', text: 'M Noufal Hermansah', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
+    { name: 'Founder', img: 'images/Naufal.webp', text: 'M Noufal Hermansah', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Ketua Founder', img: 'https://picsum.photos/300/200?2', text: 'Hafis Zaky Mahardika', links: ['https://instagram.com','https://facebook.com','https://github.com','https://youtube.com'] },
-    { name: 'Developer', img: 'https://picsum.photos/300/200?3', text: 'Ata Halilintar', links: ['https://www.roblox.com/users/1957220080/profile'] },
-    { name: 'Developer', img: 'https://picsum.photos/300/200?4', text: 'Chacaa Alyssa Silviaa', links: ['https://twitter.com'] },
-    { name: 'Admin FB', img: 'https://picsum.photos/300/200?5', text: 'Illhamrifai', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
+    { name: 'Developer', img: 'images/Ata.webp', text: 'Ata Halilintar', links: ['https://www.roblox.com/users/1957220080/profile'] },
+    { name: 'Developer', img: 'images/Chaca.webp', text: 'Chacaa Alyssa Silviaa', links: ['https://twitter.com'] },
+    { name: 'Admin FB', img: 'images/Ilham.webp', text: 'Illhamrifai', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Admin DC', img: 'https://picsum.photos/300/200?6', text: 'Rezi Kurniawan', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Admin WA', img: 'https://picsum.photos/300/200?7', text: 'Maria Angelica', links: [] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?8', text: 'Louis', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
@@ -384,7 +384,7 @@ setDataFromConfigToHtml();
     { name: 'Admin', img: 'https://picsum.photos/300/200?10', text: 'Sento', links: [] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?11', text: 'Gerald Vernandez', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?12', text: 'Helion Pantheon', links: [] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?13', text: 'Rifa Joestar', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] }
+    { name: 'Admin', img: 'images/Rifa.webp', text: 'Rifa Joestar', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] }
   ];
 
   /* ============== GENERATE SLIDES ============== */
@@ -462,13 +462,24 @@ setDataFromConfigToHtml();
       for (let i = 0; i < visible; i++) {
         const s = slides[index + i];
         s.style.display = 'block';
+      }
+      renderLock = false;
+    }, 701);
+
+    showTimeout = setTimeout(() => {
+      const step = slidesPerView();
+      const remaining = slides.length - index;
+      const visible = Math.min(step, remaining);
+
+      for (let i = 0; i < visible; i++) {
+        const s = slides[index + i];
         requestAnimationFrame(() => {
           s.classList.remove('fade-out');
           s.classList.add('fade-in');
         });
       }
       renderLock = false;
-    }, 750);
+    }, 710);
   }
 
   /* ============== AUTO SLIDE (FIXED) ============== */

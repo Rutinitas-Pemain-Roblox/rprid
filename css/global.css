@@ -242,7 +242,7 @@ body {
 }
 
 /*Other*/
-section:not(#header) .content {
+section:not(#header, #admin-team) .content {
   padding: 90px 150px;
   width: 100%;
 }
@@ -308,7 +308,7 @@ section:not(#header) .content {
 }
 
 @media screen and (max-width: 1625px) {
-  section:not(#header) .content {
+  section:not(#header, #admin-team) .content {
     padding: 90px;
   }
 
@@ -318,7 +318,7 @@ section:not(#header) .content {
 }
 
 @media screen and (max-width: 819px) {
-  section:not(#header) .content {
+  section:not(#header, #admin-team) .content {
     padding: 50px 30px;
   }
 
