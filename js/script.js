@@ -445,10 +445,10 @@ data.forEach(item => {
     const slide = document.createElement('div');
 
     const socialMap = [
-        { key: 'roblox', icon: 'images/roblox.webp', alt: 'Roblox' },
-        { key: 'facebook', icon: 'images/facebook.webp', alt: 'Facebook' },
-        { key: 'discord', icon: 'images/discord.webp', alt: 'Discord' },
-        { key: 'website', icon: 'images/website.webp', alt: 'Website' }
+        { key: 'roblox', icon: 'images/roblox.png', alt: 'Roblox' },
+        { key: 'facebook', icon: 'images/facebook.png', alt: 'Facebook' },
+        { key: 'discord', icon: 'images/discord.pgng', alt: 'Discord' },
+        { key: 'website', icon: 'images/browser.png', alt: 'Website' }
     ];
 
 

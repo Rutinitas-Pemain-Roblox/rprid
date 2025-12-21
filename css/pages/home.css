@@ -420,11 +420,18 @@
 }
 
 .carousel .social {
-    padding-bottom: 12px;
+    padding: 0 18px 8px 18px;
+    gap: 6px;
+    display: flex;
 }
 
 .carousel .social a {
     text-decoration: none;
+}
+
+.carousel .social a img {
+    height: auto;
+    width: 32px;
 }
 
 @media (max-width: 768px) {
