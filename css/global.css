@@ -33,10 +33,10 @@
   --ip-copied-background: rgba(74, 255, 107, 0.17);
   --ip-copied-icon-background: rgba(74, 255, 107, 0.5);
 
-  --copy-ip-button-background: rgba(196, 46, 0, 0.7);
-  --how-to-join-button-background: rgba(196, 46, 0, 0.2);
-  --stats-background: rgba(196, 46, 0, 0.05);
-  --stat-icon-background-2: rgba(196, 46, 0, 0.5);
+  --copy-ip-button-background: #c42e00b3;
+  --how-to-join-button-background: #c42e0033;
+  --stats-background: #c42e000d;
+  --stat-icon-background-2: #c42e0080;
 
   --scroll-bar: #ff801e;
   --scroll-bar-hover: #ff0000;
@@ -66,7 +66,7 @@ body {
   width: max-content;
   flex-direction: row;
   justify-content: space-between;
-  padding: 24px 0px;
+  padding: 24px 14px;
   align-items: center;
   border-radius: 32px;
   background: #24272b48;
@@ -261,7 +261,6 @@ section:not(#header #admin-team) .content {
 /*Responsive*/
 @media screen and (max-width: 1625px) {
   .navbar {
-    padding: 14px 14px;
     align-items: center;
   }
 }

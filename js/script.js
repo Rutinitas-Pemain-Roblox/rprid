@@ -464,7 +464,7 @@ setDataFromConfigToHtml();
         s.style.display = 'block';
       }
       renderLock = false;
-    }, 701);
+    }, 705);
 
     showTimeout = setTimeout(() => {
       const step = slidesPerView();
