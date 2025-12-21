@@ -378,7 +378,7 @@ setDataFromConfigToHtml();
     { name: 'Developer', img: 'images/Chaca.webp', text: 'Chacaa Alyssa Silviaa', links: ['https://twitter.com'] },
     { name: 'Admin FB', img: 'images/Ilham.webp', text: 'Illhamrifai', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Admin DC', img: 'https://picsum.photos/300/200?6', text: 'Rezi Kurniawan', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Admin WA', img: 'https://picsum.photos/300/200?7', text: 'Maria Angelica', links: [] },
+    { name: 'Admin WA', img: 'images/Angel.webp', text: 'Maria Angelica', links: [] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?8', text: 'Louis', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?9', text: 'Muhammad Nandaka', links: ['https://twitter.com','https://instagram.com','https://facebook.com'] },
     { name: 'Admin', img: 'https://picsum.photos/300/200?10', text: 'Sento', links: [] },

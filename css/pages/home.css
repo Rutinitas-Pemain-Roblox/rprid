@@ -437,7 +437,10 @@
     -o-background-size: cover;
     -webkit-background-size: cover;
     z-index: 0;
+    padding: 90px;
+    overflow: hidden;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -454,7 +457,7 @@
     font-weight: 700;
     color: var(--white-color);
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 
 #discord .content .section-title span {
@@ -727,6 +730,12 @@
         align-items: start;
         justify-content: center;
     }
+    
+    #header .content .left img {
+        max-width: calc(100% - 20dvh);
+        height: auto;
+        transition: 0.3s ease-in-out;
+    }
 }
 
 @media screen and (max-width: 1361px) {
@@ -780,6 +789,15 @@
     #header .content .right .stats {
         width: 100%;
         justify-content: space-between;
+    }
+    
+    #discord {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    #discord .content {
+        padding: 20px;
     }
 }
 
