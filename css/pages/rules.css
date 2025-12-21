@@ -60,6 +60,8 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    background: #24272B;
+    background: linear-gradient(180deg, rgba(36, 39, 43, 1) 0%,rgba(44, 39, 41, 1) 100%)
 }
 
 #rules .warning {
@@ -153,16 +155,32 @@
     color: var(--main-color);
 }
 
-/*Server Join*/
-#join-server{
-    background: var(--stats-background);
+/*Discord*/
+#discord {
+    background-color: #2C2729;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23412c33' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%235a2e38' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23772c37' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%2397262e' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23ba1e1d' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23e12310' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23FF370D' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
     min-width: 100%;
     height: 100%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    z-index: 0;
+    padding: 90px;
+    overflow: hidden;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-#join-server .content {
+#discord .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#discord .content div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,25 +188,19 @@
     gap: 40px;
 }
 
-#join-server .content .section-title {
+#discord .content .section-title {
     font-size: 30px;
     font-weight: 700;
     color: var(--white-color);
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 
-#join-server .content .section-title span {
+#discord .content .section-title span {
     color: var(--main-color);
 }
 
-#join-server .content .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-#join-server .content .buttons .copy-ip {
+.join-discord {
     background: var(--copy-ip-button-background);
     border: 2px solid var(--main-color);
     border-radius: 3px;
@@ -200,39 +212,13 @@
     transition: 0.2s;
 }
 
-#join-server .content .buttons .join-discord {
-    background: var(--how-to-join-button-background);
-    border: 2px solid var(--description-color);
-    border-radius: 3px;
-    padding: 10px 30px;
-    color: var(--description-color);
-    font-size: 17px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-#join-server .content .buttons .copy-ip:hover, #join-server .content .buttons .join-discord:hover {
+.join-discord:hover {
     opacity: 0.8;
 }
 
-#join-server .content .ip-copied {
-    color: var(--green-color);
-    background: var(--ip-copied-background);
-    padding: 10px 20px;
-    width: fit-content;
-    border-radius: 5px;
-    font-size: 17px;
-    display: none;
-}
-
-#join-server .content .ip-copied.active {
-    display: flex;
-}
-
-#join-server .content .ip-copied.error {
-    background: var(--warning-background);
-    color: var(--red-color);
+#discord .content .join-discord a {
+    text-decoration: none;
+    color: var(--white-color);
 }
 
 
@@ -266,6 +252,15 @@
 
     #header .content .info .description {
         font-size: 16px;
+    }
+
+    #discord {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    #discord .content {
+        padding: 20px;
     }
 }
 
