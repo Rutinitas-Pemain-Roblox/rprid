@@ -372,48 +372,106 @@ setDataFromConfigToHtml();
 
   /* ================= DATA ================= */
   const data = [
-    { name: 'Founder', img: 'images/Naufal.webp', text: 'M Noufal Hermansah', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Ketua Founder', img: 'https://picsum.photos/300/200?2', text: 'Hafis Zaky Mahardika', links: ['https://instagram.com','https://facebook.com','https://github.com','https://youtube.com'] },
-    { name: 'Developer', img: 'images/Ata.webp', text: 'Ata Halilintar', links: ['https://www.roblox.com/users/1957220080/profile'] },
-    { name: 'Developer', img: 'images/Chaca.webp', text: 'Chacaa Alyssa Silviaa', links: ['https://twitter.com'] },
-    { name: 'Admin FB', img: 'images/Ilham.webp', text: 'Illhamrifai', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Admin DC', img: 'https://picsum.photos/300/200?6', text: 'Rezi Kurniawan', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Admin WA', img: 'images/Angel.webp', text: 'Maria Angelica', links: [] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?8', text: 'Louis', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?9', text: 'Muhammad Nandaka', links: ['https://twitter.com','https://instagram.com','https://facebook.com'] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?10', text: 'Sento', links: [] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?11', text: 'Gerald Vernandez', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] },
-    { name: 'Admin', img: 'https://picsum.photos/300/200?12', text: 'Helion Pantheon', links: [] },
-    { name: 'Admin', img: 'images/Rifa.webp', text: 'Rifa Joestar', links: ['https://twitter.com','https://instagram.com','https://facebook.com','https://github.com'] }
+    { name: 'Founder', 
+        img: 'images/Naufal.webp', 
+        text: 'M Noufal Hermansah', 
+        roblox: [''] 
+    },
+    { name: 'Ketua Founder', 
+        img: 'https://picsum.photos/300/200?2', 
+        text: 'Hafis Zaky Mahardika', 
+        roblox: [''] 
+    },
+    { name: 'Developer', 
+        img: 'images/Ata.webp', 
+        text: 'Ata Halilintar', 
+        roblox: ['https://www.roblox.com/users/1957220080/profile'] 
+    },
+    { name: 'Developer', 
+        img: 'images/Chaca.webp', 
+        text: 'Chacaa Alyssa Silviaa', 
+        roblox: [''] 
+    },
+    { name: 'Admin FB', 
+        img: 'images/Ilham.webp', 
+        text: 'Illhamrifai', 
+        roblox: [''] 
+    },
+    { name: 'Admin DC', 
+        img: 'https://picsum.photos/300/200?6', 
+        text: 'Rezi Kurniawan', 
+        roblox: [''] 
+    },
+    { name: 'Admin WA', 
+        img: 'images/Angel.webp', 
+        text: 'Maria Angelica', 
+        roblox: [] 
+    },
+    { name: 'Admin', 
+        img: 'https://picsum.photos/300/200?8', 
+        text: 'Louis', 
+        roblox: [''] 
+    },
+    { name: 'Admin', 
+        img: 'https://picsum.photos/300/200?9', 
+        text: 'Muhammad Nandaka', 
+        roblox: [''] 
+    },
+    { name: 'Admin', 
+        img: 'https://picsum.photos/300/200?10', 
+        text: 'Sento', 
+        roblox: [] 
+    },
+    { name: 'Admin', 
+        img: 'https://picsum.photos/300/200?11', 
+        text: 'Gerald Vernandez', 
+        roblox: [''] 
+    },
+    { name: 'Admin', 
+        img: 'https://picsum.photos/300/200?12', 
+        text: 'Helion Pantheon', 
+        roblox: [] 
+    },
+    { name: 'Admin', 
+        img: 'images/Rifa.webp', 
+        text: 'Rifa Joestar', 
+        roblox: [''] 
+    }
   ];
 
-  /* ============== GENERATE SLIDES ============== */
-  const carousel = document.getElementById('carousel');
-  data.forEach(item => {
+/* ============== GENERATE SLIDES ============== */
+const carousel = document.getElementById('carousel');
+data.forEach(item => {
     const slide = document.createElement('div');
-    slide.className = 'slide';
+
     const socialMap = [
-      { key: 'roblox', label: 'Roblox' },
-      { key: 'facebook', label: 'Facebook' },
-      { key: 'discord', label: 'Discord' },
-      { key: 'website', label: 'Website' }
+        { key: 'roblox', icon: 'images/roblox.webp', alt: 'Roblox' },
+        { key: 'facebook', icon: 'images/facebook.webp', alt: 'Facebook' },
+        { key: 'discord', icon: 'images/discord.webp', alt: 'Discord' },
+        { key: 'website', icon: 'images/website.webp', alt: 'Website' }
     ];
 
-    const buttons = socialMap
-      .filter(s => item.links && item.links[s.key])
-      .map(s => `<a href="${item.links[s.key]}" target="_blank" rel="noopener">${s.label}</a>`)
-      .join('');
 
+    const buttons = socialMap
+        .filter(s => Array.isArray(item[s.key]) && item[s.key].length > 0 && item[s.key][0].trim() !== '')
+        .map(s => `
+            <a href="${item[s.key][0]}" target="_blank" class="social-btn">
+            <img src="${s.icon}" alt="${s.alt}" class="social-icon">
+            </a>
+        `)
+    .join('');
+
+    slide.className = 'slide';
     slide.innerHTML = `
-      <div class="card">
-        <div class="name">${item.name}</div>
-        <img src="${item.img}">
-        <div class="text">${item.text}</div>
-        ${buttons ? `<div class="socials">${buttons}</div>` : ''}
-      </div>
+        <div class="card">
+            <div class="name">${item.name}</div>
+            <img src="${item.img}">
+            <div class="text">${item.text}</div>
+            ${buttons ? `<div class="social">${buttons}</div>` : ''}
+        </div>
     `;
     carousel.appendChild(slide);
-  });
+});
 
   const slides = document.querySelectorAll('.slide');
   const prev = document.querySelector('.prev');

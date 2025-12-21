@@ -419,6 +419,14 @@
     color: var(--description-color);
 }
 
+.carousel .social {
+    padding-bottom: 12px;
+}
+
+.carousel .social a {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .slide { width: 50%; }
 }
