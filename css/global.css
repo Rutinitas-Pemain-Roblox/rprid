@@ -200,6 +200,20 @@ body {
   transition: 0.3s ease-in-out;
 }
 
+/*CS*/
+#CS {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-20px, -20px);
+  background: var(--main-color);
+  height: 3rem;
+  width: 3rem;
+  font-size: smaller;
+  display: flex;
+  flex-direction: row;
+}
+
 /*Footer*/
 #footer {
   padding: 20px 150px;
