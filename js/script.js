@@ -486,7 +486,7 @@ data.forEach(item => {
     const socialMap = [
         { key: 'roblox', icon: 'images/roblox.png', alt: 'Roblox' },
         { key: 'facebook', icon: 'images/facebook.png', alt: 'Facebook' },
-        { key: 'discord', icon: 'images/discord.pgng', alt: 'Discord' },
+        { key: 'discord', icon: 'images/discord.png', alt: 'Discord' },
         { key: 'website', icon: 'images/browser.png', alt: 'Website' }
     ];
 
