@@ -375,67 +375,106 @@ setDataFromConfigToHtml();
     { name: 'Founder', 
         img: 'images/Naufal.webp', 
         text: 'M Noufal Hermansah', 
-        roblox: [''] 
+        roblox: ['https://www.roblox.com/users/149241310/profile'],
+        facebook: [''],
+        discord: ['https://discordapp.com/users/505328349325950977'],
+        website: ['']
     },
     { name: 'Ketua Founder', 
         img: 'https://picsum.photos/300/200?2', 
         text: 'Hafis Zaky Mahardika', 
-        roblox: [''] 
+        roblox: ['https://www.roblox.com/users/665901280/profile'],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Developer', 
         img: 'images/Ata.webp', 
         text: 'Ata Halilintar', 
-        roblox: ['https://www.roblox.com/users/1957220080/profile'] 
+        roblox: ['https://www.roblox.com/users/1957220080/profile'],
+        facebook: ['https://www.facebook.com/ata.254z/'],
+        discord: [''],
+        website: ['']
     },
     { name: 'Developer', 
         img: 'images/Chaca.webp', 
         text: 'Chacaa Alyssa Silviaa', 
-        roblox: [''] 
+        roblox: ['https://www.roblox.com/users/9827550127/profile'],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin FB', 
         img: 'images/Ilham.webp', 
         text: 'Illhamrifai', 
-        roblox: [''] 
+        roblox: ['https://www.roblox.com/users/717297130/profile'],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin DC', 
         img: 'https://picsum.photos/300/200?6', 
         text: 'Rezi Kurniawan', 
-        roblox: [''] 
+        roblox: [''],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin WA', 
         img: 'images/Angel.webp', 
         text: 'Maria Angelica', 
-        roblox: [] 
+        roblox: ['https://www.roblox.com/users/1587001610/profile'],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'https://picsum.photos/300/200?8', 
         text: 'Louis', 
-        roblox: [''] 
+        roblox: [''],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'https://picsum.photos/300/200?9', 
         text: 'Muhammad Nandaka', 
-        roblox: [''] 
+        roblox: [''],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'https://picsum.photos/300/200?10', 
         text: 'Sento', 
-        roblox: [] 
+        roblox: [],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'https://picsum.photos/300/200?11', 
         text: 'Gerald Vernandez', 
-        roblox: [''] 
+        roblox: [''],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'https://picsum.photos/300/200?12', 
         text: 'Helion Pantheon', 
-        roblox: [] 
+        roblox: [],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     },
     { name: 'Admin', 
         img: 'images/Rifa.webp', 
         text: 'Rifa Joestar', 
-        roblox: [''] 
+        roblox: ['https://www.roblox.com/users/1488585427/profile'],
+        facebook: [''],
+        discord: [''],
+        website: ['']
     }
   ];
 
