@@ -1,4 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.hover.sticky": false
+    "editor.hover.sticky": false,
+    "workbench.commandPalette.experimental.suggestCommands": false,
+    "workbench.commandPalette.preserveInput": false
 }

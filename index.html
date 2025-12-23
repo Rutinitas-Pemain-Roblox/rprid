@@ -44,15 +44,58 @@
             <a href="rules.html" class="link"><img src="images/rule_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"><div>Peraturan</div></a>
             <a href="store.html" class="link"><img src="images/shopping_bag_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"><div>Toko</div></a>
             <a href="games.html" class="link"><img src="images/videogame_asset_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"><div>Permainan</div></a>
-            <a href="contact.html" class="link"><img src="images/support_agent_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"><div>Hubungi Kami</div></a>
         </div>
     </div>
 
     <!--CS-->
-    <div id="CS">
-        <img src="">
-        Hubungi Kami
+    <div id="CS" onclick="Buka_CS()">
+        <div>
+            <img src="images/mail_fill.svg">
+        </div>
+        Hubungi
+        <br>
+        Kami
     </div>
+
+    <!--Contacts-->
+    <section class="contactoverlay" onclick="Tutup_CS()">
+        <div id="contacts">
+            <div class="contentc">
+                <h2 class="section-title">Form Kontak</h2>
+    
+                <div class="columns">
+                    <form class="contact-form" action="" method="POST">
+                        <input type="hidden" name="_subject" value="Message From Website">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="" class="location-after-submit">
+    
+                        <div class="row">
+                            <label for="name">* Username Roblox (atau Nama asli)</label>
+                            <input type="text" required id="name" name="name" placeholder="username atau nama anda">
+                        </div>
+                        <div class="row">
+                            <label for="discord-name">Discord Username + Tag (Opsional)</label>
+                            <input type="text" id="discord-name" name="discord-name" placeholder="nikashi33#0">
+                        </div>
+                        <div class="row">
+                            <label for="email">* Email</label>
+                            <input type="email" required id="email" name="email" placeholder="nikashi@example.com">
+                        </div>
+                        <div class="row">
+                            <label for="message">* Pesan</label>
+                            <textarea required id="message" name="message" placeholder="Masalah? Pertanyaan? Saran?"></textarea>
+                        </div>
+                        <div class="form-footer">
+                            <p class="alert">Kolom yang ditandai dengan * wajib diisi</p>
+                            <button type="submit">Kirim Pesan <i class="fa-solid fa-paper-plane"></i></button>
+                            <div style="height: 4dvh;"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Header-->
     <section id="header">
