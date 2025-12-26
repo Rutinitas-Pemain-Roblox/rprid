@@ -106,8 +106,12 @@ const window_cs = document.querySelector(".contactoverlay");
 const mail_line = document.querySelector("mail_line");
 const close_line = document.querySelector("mail_line");
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-mail_line.style.display = "flex";
-close_line.style.display = "none";
+if (mail_line) {
+    mail_line.style.display = "flex";
+}
+if (close_line) {
+    close_line.style.display = "none";
+}
 async function Buka_CS() {
     window_cs.classList.toggle("active");
     mail_line.style.display = "none";
