@@ -103,15 +103,23 @@ hamburger.addEventListener("click", () => {
 
 /*CS*/
 const window_cs = document.querySelector(".contactoverlay");
+const mail_line = document.getElementById("mail_line");
+const close_line = document.getElementById("mail_line");
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+mail_line.style.display = "flex";
+close_line.style.display = "none";
 async function Buka_CS() {
     window_cs.classList.toggle("active");
+    mail_line.style.display = "none";
+    close_line.style.display = "flex";
     await sleep(1);
     window_cs.classList.toggle("anim");
 };
 
 async function Tutup_CS() {
     window_cs.classList.remove("anim");
+    mail_line.style.display = "flex";
+    close_line.style.display = "none";
     await sleep(5);
     window_cs.classList.remove("active");
 };
@@ -251,7 +259,7 @@ setDataFromConfigToHtml();
         text: 'Ata Halilintar', 
         roblox: ['https://www.roblox.com/users/1957220080/profile'],
         facebook: ['https://www.facebook.com/ata.254z/'],
-        discord: [''],
+        discord: ['https://discordapp.com/users/1159844857477615647'],
         website: ['']
     },
     { name: 'Developer', 
