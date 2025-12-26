@@ -108,25 +108,25 @@ const close_line = document.querySelector("mail_line");
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 if (mail_line) {
     mail_line.style.display = "flex";
+    async function Buka_CS() {
+        window_cs.classList.toggle("active");
+        mail_line.style.display = "none";
+        close_line.style.display = "flex";
+        await sleep(50);
+        window_cs.classList.toggle("anim");
+    };
 }
+
 if (close_line) {
     close_line.style.display = "none";
+    async function Tutup_CS() {
+        window_cs.classList.remove("anim");
+        mail_line.style.display = "flex";
+        close_line.style.display = "none";
+        await sleep(300);
+        window_cs.classList.remove("active");
+    };
 }
-async function Buka_CS() {
-    window_cs.classList.toggle("active");
-    mail_line.style.display = "none";
-    close_line.style.display = "flex";
-    await sleep(50);
-    window_cs.classList.toggle("anim");
-};
-
-async function Tutup_CS() {
-    window_cs.classList.remove("anim");
-    mail_line.style.display = "flex";
-    close_line.style.display = "none";
-    await sleep(300);
-    window_cs.classList.remove("active");
-};
 
 /*FAQs*/
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
