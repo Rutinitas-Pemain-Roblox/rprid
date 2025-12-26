@@ -219,7 +219,7 @@ body {
   gap: 6px;
 }
 
-#CS div {
+#CS .bg {
   background: var(--main-color);
   height: 4rem;
   width: 4rem;
@@ -229,11 +229,6 @@ body {
   cursor: pointer;
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-}
-
-#CS div img {
-  height: 60%;
-  width: 60%;
 }
 
 /*Contacts*/
