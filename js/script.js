@@ -102,12 +102,17 @@ hamburger.addEventListener("click", () => {
 })
 
 /*CS*/
-const window_cs = document.querySelector(".contactoverlay");
-const mail_line = document.querySelector("mail_line");
-const close_line = document.querySelector("mail_line");
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-if (mail_line) {
-    mail_line.style.display = "flex";
+document.addEventListener("DOMContentLoaded"), function() {
+    const window_cs = document.querySelector(".contactoverlay");
+    const mail_line = document.querySelector("mail_line");
+    const close_line = document.querySelector("mail_line");
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    if (mail_line) {
+        mail_line.style.display = "flex";
+    }
+    if (close_line) {
+        close_line.style.display = "none";
+    }
     async function Buka_CS() {
         window_cs.classList.toggle("active");
         mail_line.style.display = "none";
@@ -115,10 +120,6 @@ if (mail_line) {
         await sleep(50);
         window_cs.classList.toggle("anim");
     };
-}
-
-if (close_line) {
-    close_line.style.display = "none";
     async function Tutup_CS() {
         window_cs.classList.remove("anim");
         mail_line.style.display = "flex";
@@ -126,7 +127,7 @@ if (close_line) {
         await sleep(300);
         window_cs.classList.remove("active");
     };
-}
+};
 
 /*FAQs*/
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
