@@ -94,12 +94,15 @@ productContainers.forEach((item, i) => {
 /*Mobile navbar (open, close)*/
 const navbar = document.querySelector(".navbar");
 const navbarLinks = document.querySelector(".links");
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.getElementById("hamburger");
 
-hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-    navbarLinks.classList.toggle("active");
-});
+if (hamburger) {
+    hamburger.addEventListener("click", function() {
+        navbar.classList.toggle("active");
+        navbarLinks.classList.toggle("active");
+    });
+};
+
 
 /*CS*/
 document.addEventListener("DOMContentLoaded"), function() {
