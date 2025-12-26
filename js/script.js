@@ -103,8 +103,8 @@ hamburger.addEventListener("click", () => {
 
 /*CS*/
 const window_cs = document.querySelector(".contactoverlay");
-const mail_line = document.getElementById("mail_line");
-const close_line = document.getElementById("mail_line");
+const mail_line = document.querySelector("mail_line");
+const close_line = document.querySelector("mail_line");
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 mail_line.style.display = "flex";
 close_line.style.display = "none";
