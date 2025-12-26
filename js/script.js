@@ -112,7 +112,7 @@ async function Buka_CS() {
     window_cs.classList.toggle("active");
     mail_line.style.display = "none";
     close_line.style.display = "flex";
-    await sleep(1);
+    await sleep(50);
     window_cs.classList.toggle("anim");
 };
 
@@ -120,7 +120,7 @@ async function Tutup_CS() {
     window_cs.classList.remove("anim");
     mail_line.style.display = "flex";
     close_line.style.display = "none";
-    await sleep(5);
+    await sleep(300);
     window_cs.classList.remove("active");
 };
 
